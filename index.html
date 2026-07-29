@@ -16,6 +16,7 @@
   h1 { font-size: 28px; margin-bottom: 4px; }
   h2 { font-size: 20px; margin-top: 32px; border-left: 4px solid #2e7d32; padding-left: 10px; }
   .updated { color: #888; font-size: 14px; margin-bottom: 24px; }
+  .language-divider { margin: 52px 0 36px; border: 0; border-top: 1px solid #c8e6c9; }
   ul, ol { padding-left: 20px; }
   li { margin-bottom: 6px; }
   a { color: #2e7d32; }
@@ -23,15 +24,16 @@
 </head>
 <body>
   <h1>隱私權政策</h1>
-  <p class="updated">最後更新日期：2026-07-19</p>
+  <p class="updated">最後更新日期：2026-07-28</p>
+  <p><a href="#privacy-en">English version</a></p>
 
-  <p>「言葉森林 Kotoba Forest」（以下稱「本 App」，Android 套件名稱 <code>com.kotobaforest.app</code>）由個人開發者開發與維運。本政策說明本 App 在您使用服務時，會蒐集哪些資訊、如何使用，以及您擁有的權利。</p>
+  <p>「言葉森林 Kotoba Forest」（以下稱「本 App」，Android 套件名稱及 iOS Bundle ID 均為 <code>com.kotobaforest.app</code>）由個人開發者開發與維運。本政策說明本 App 在您使用服務時，會蒐集哪些資訊、如何使用，以及您擁有的權利。</p>
 
   <h2>我們蒐集的資訊</h2>
   <ul>
-    <li><strong>帳號資訊</strong>：首次使用時本 App 會建立匿名帳號（不需提供任何個人資訊）。當您選擇以 Email 或 Google 帳號註冊/登入時，我們會儲存您的 Email 地址，用於帳號識別、登入驗證與跨裝置進度備份。</li>
+    <li><strong>帳號資訊</strong>：首次使用時本 App 會建立匿名帳號（不需提供任何個人資訊）。當您選擇以 Email、Google 帳號或 Sign in with Apple 註冊／登入時，我們會儲存登入服務提供的帳號識別碼及 Email 地址（若您選擇「隱藏我的電子郵件」，可能是 Apple 提供的轉寄地址），用於帳號識別、登入驗證與跨裝置進度備份。</li>
     <li><strong>學習進度資料</strong>：包含您的單字複習紀錄（間隔複習階段、下次複習時間）、連續學習天數、種子與語彙果數量、已擁有與放置的角色、森林狀態等，用於提供個人化的學習功能。</li>
-    <li><strong>購買資訊</strong>：若您訂閱 VIP 會員，付款由 Google Play 處理；我們僅接收購買憑證用於驗證訂閱狀態，<strong>不會取得</strong>您的信用卡或付款帳戶資訊。</li>
+    <li><strong>購買資訊</strong>：若您訂閱 VIP 會員，付款由 Google Play 或 Apple App Store 處理；我們會接收購買憑證、商品方案、訂閱平台與有效期間，用於驗證及維護會員狀態，但<strong>不會取得</strong>您的信用卡號或完整付款帳戶資訊。</li>
     <li><strong>匿名使用數據</strong>：為了改善產品，我們會記錄匿名的 App 互動事件（例如完成一次複習、開始一次測驗等操作類型與發生時間），並以帳號的假名化識別碼（pseudonymous ID）關聯。這些事件<strong>不包含</strong>任何個人身分資訊、輸入內容或裝置廣告 ID，僅用於彙總統計與功能改善分析。</li>
   </ul>
   <p>本 App <strong>不顯示廣告</strong>，不使用廣告 SDK，也不會蒐集裝置廣告 ID。</p>
@@ -47,17 +49,19 @@
   <p>本 App 使用以下第三方服務來儲存與處理資料：</p>
   <ul>
     <li><strong>Supabase</strong>（資料庫與帳號驗證）：儲存您的帳號資訊與學習進度資料</li>
-    <li><strong>Google Play</strong>（應用程式內購買）：處理 VIP 訂閱付款</li>
+    <li><strong>Google</strong>（Google 登入、Google Play 應用程式內購買）：在您選用時處理登入或 Android VIP 訂閱付款</li>
+    <li><strong>Apple</strong>（Sign in with Apple、App Store 應用程式內購買）：在您選用時處理登入或 iOS VIP 訂閱付款</li>
+    <li><strong>內容傳遞服務</strong>：傳遞預錄發音等靜態學習資產；不會向該服務傳送您的帳號資料或學習進度</li>
   </ul>
   <p>部分學習資料亦會快取在您的裝置本機，以支援離線學習。我們不會將您的個人資料出售給第三方，亦不會用於與本 App 功能無關的行銷目的。</p>
 
   <h2 id="delete-account">帳號與資料刪除</h2>
-  <p>您可以隨時要求刪除帳號與所有相關資料（包含 Email、學習進度、購買紀錄以外的所有伺服器端資料）。刪除方式有兩種：</p>
+  <p>您可以隨時要求刪除帳號與相關伺服器端資料，包括 Email、學習進度、遊戲狀態與使用事件。依法令、稅務、防詐或商店交易爭議所必須保留的最少交易驗證紀錄，可能依必要期間保留；付款方式資料由 Google Play 或 Apple App Store 管理，不由本 App 保存。刪除方式有兩種：</p>
   <ol>
     <li><strong>App 內申請</strong>：開啟 App → 「設定」分頁 → 點選最下方「刪除帳號」→ 依畫面指示送出刪除請求。</li>
     <li><strong>Email 申請</strong>：寄信至 <a href="mailto:stevenhuang42195@gmail.com">stevenhuang42195@gmail.com</a>，主旨註明「刪除帳號請求」並附上您的註冊 Email。</li>
   </ol>
-  <p>我們會於收到請求後 <strong>7 個工作天內</strong>完成刪除。刪除後所有學習進度無法復原；VIP 訂閱請另行於 Google Play「訂閱」頁面取消，避免持續扣款。</p>
+  <p>我們會於收到請求後 <strong>7 個工作天內</strong>完成刪除。刪除後所有學習進度無法復原；刪除 App 帳號<strong>不會自動取消商店訂閱</strong>，VIP 訂閱請另行於 Google Play 或 Apple App Store 的「訂閱」頁面取消，避免持續扣款。</p>
 
   <h2>資料保留</h2>
   <p>您的帳號資訊與學習進度會持續保留，直到您依上述方式要求刪除帳號為止。</p>
@@ -71,5 +75,82 @@
   <h2>聯絡我們</h2>
   <p>若您對本隱私權政策或您的資料有任何疑問，歡迎透過以下方式聯絡我們：</p>
   <p>Email：<a href="mailto:stevenhuang42195@gmail.com">stevenhuang42195@gmail.com</a></p>
+
+  <hr class="language-divider" />
+
+  <section id="privacy-en" lang="en">
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: July 28, 2026</p>
+
+    <p>“Kotoba Forest” (the “App”; Android package and iOS bundle identifier
+      <code>com.kotobaforest.app</code>) is developed and operated by an independent developer.
+      This policy explains what information the App collects, how it is used, and the choices available to you.</p>
+
+    <h2>Information We Collect</h2>
+    <ul>
+      <li><strong>Account information:</strong> The App creates an anonymous account on first use without asking
+        for personal information. If you choose email, Google, or Sign in with Apple, we store the account
+        identifier and email address supplied by that provider. An Apple private relay address may be used when
+        you choose Hide My Email.</li>
+      <li><strong>Learning progress:</strong> This includes vocabulary review history, spaced-repetition stage
+        and due time, learning streak, in-app seed and fruit balances, owned and placed characters, and forest state.</li>
+      <li><strong>Purchase information:</strong> Google Play or the Apple App Store processes VIP subscription
+        payments. We receive a purchase credential, product tier, purchase platform, and entitlement period to
+        verify and maintain VIP access. We do not receive or store your credit card number or full payment account details.</li>
+      <li><strong>Pseudonymous usage data:</strong> We record limited in-app interaction events, such as starting
+        a quiz or completing a review, together with the event time and a pseudonymous account identifier. These
+        events do not contain free-form input, advertising identifiers, or direct identity details and are used
+        for aggregate analytics and product improvement.</li>
+    </ul>
+    <p>The App has no advertising, does not use advertising SDKs, and does not collect an advertising identifier.</p>
+
+    <h2>How We Use Information</h2>
+    <ul>
+      <li>Provide, maintain, and improve vocabulary learning, spaced review, forest, and character features</li>
+      <li>Restore your sign-in state and progress when you reopen the App or change devices</li>
+      <li>Verify and maintain VIP subscription access</li>
+    </ul>
+
+    <h2>Storage and Service Providers</h2>
+    <ul>
+      <li><strong>Supabase:</strong> database storage and account authentication</li>
+      <li><strong>Google:</strong> optional Google sign-in and Google Play purchases on Android</li>
+      <li><strong>Apple:</strong> optional Sign in with Apple and App Store purchases on iOS</li>
+      <li><strong>Content delivery services:</strong> delivery of static learning assets such as prerecorded
+        pronunciation; account details and learning progress are not sent to this service</li>
+    </ul>
+    <p>Some learning data is cached locally for offline use. We do not sell personal information and do not use
+      it for marketing unrelated to the App.</p>
+
+    <h2 id="delete-account-en">Account and Data Deletion</h2>
+    <p>You may request deletion of your account and associated server data, including email, learning progress,
+      game state, and usage events. Minimum transaction-verification records may be retained where required for
+      legal, tax, fraud-prevention, or store dispute purposes. Payment methods remain with Google Play or Apple
+      and are not stored by the App.</p>
+    <ol>
+      <li><strong>In the App:</strong> open Settings → Delete Account and follow the on-screen instructions.</li>
+      <li><strong>By email:</strong> send a message to
+        <a href="mailto:stevenhuang42195@gmail.com">stevenhuang42195@gmail.com</a> with the subject
+        “Account deletion request” and include your registered email address.</li>
+    </ol>
+    <p>We complete deletion within seven business days. Deleted progress cannot be restored. Deleting your
+      Kotoba Forest account does not automatically cancel a store subscription; cancel VIP separately in Google
+      Play or the Apple App Store to avoid future charges.</p>
+
+    <h2>Retention</h2>
+    <p>Account information and learning progress are retained until you request account deletion as described above.</p>
+
+    <h2>Children’s Privacy</h2>
+    <p>The App is not specifically directed to children and does not knowingly collect personal information from
+      children under 13.</p>
+
+    <h2>Changes to This Policy</h2>
+    <p>We may update this policy from time to time. Material changes will be reflected by the updated date at the
+      top of this page.</p>
+
+    <h2>Contact Us</h2>
+    <p>For privacy or data questions, email
+      <a href="mailto:stevenhuang42195@gmail.com">stevenhuang42195@gmail.com</a>.</p>
+  </section>
 </body>
 </html>
