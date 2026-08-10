@@ -24,7 +24,7 @@
 </head>
 <body>
   <h1>隱私權政策</h1>
-  <p class="updated">最後更新日期：2026-07-28</p>
+  <p class="updated">最後更新日期：2026-08-10</p>
   <p><a href="#privacy-en">English version</a></p>
 
   <p>「言葉森林 Kotoba Forest」（以下稱「本 App」，Android 套件名稱及 iOS Bundle ID 均為 <code>com.kotobaforest.app</code>）由個人開發者開發與維運。本政策說明本 App 在您使用服務時，會蒐集哪些資訊、如何使用，以及您擁有的權利。</p>
@@ -49,6 +49,7 @@
   <p>本 App 使用以下第三方服務來儲存與處理資料：</p>
   <ul>
     <li><strong>Supabase</strong>（資料庫與帳號驗證）：儲存您的帳號資訊與學習進度資料</li>
+    <li><strong>PostHog</strong>（產品分析，US Cloud）：接收帳號的假名化識別碼、白名單內的 App 互動事件與必要的 App／平台版本資訊，用於漏斗、留存及量測健康分析；不接收 Email、電話、購買憑證、自由輸入、裝置廣告 ID，且已停用 IP 位址儲存</li>
     <li><strong>Google</strong>（Google 登入、Google Play 應用程式內購買）：在您選用時處理登入或 Android VIP 訂閱付款</li>
     <li><strong>Apple</strong>（Sign in with Apple、App Store 應用程式內購買）：在您選用時處理登入或 iOS VIP 訂閱付款</li>
     <li><strong>內容傳遞服務</strong>：傳遞預錄發音等靜態學習資產；不會向該服務傳送您的帳號資料或學習進度</li>
@@ -61,7 +62,7 @@
     <li><strong>App 內申請</strong>：開啟 App → 「設定」分頁 → 點選最下方「刪除帳號」→ 依畫面指示送出刪除請求。</li>
     <li><strong>Email 申請</strong>：寄信至 <a href="mailto:stevenhuang42195@gmail.com">stevenhuang42195@gmail.com</a>，主旨註明「刪除帳號請求」並附上您的註冊 Email。</li>
   </ol>
-  <p>我們會於收到請求後 <strong>7 個工作天內</strong>完成刪除。刪除後所有學習進度無法復原；刪除 App 帳號<strong>不會自動取消商店訂閱</strong>，VIP 訂閱請另行於 Google Play 或 Apple App Store 的「訂閱」頁面取消，避免持續扣款。</p>
+  <p>我們會於收到請求後 <strong>7 個工作天內</strong>完成刪除，包括依同一假名化帳號識別碼刪除 Supabase 與 PostHog 中的相關資料。刪除後所有學習進度無法復原；刪除 App 帳號<strong>不會自動取消商店訂閱</strong>，VIP 訂閱請另行於 Google Play 或 Apple App Store 的「訂閱」頁面取消，避免持續扣款。</p>
 
   <h2>資料保留</h2>
   <p>您的帳號資訊與學習進度會持續保留，直到您依上述方式要求刪除帳號為止。</p>
@@ -80,7 +81,7 @@
 
   <section id="privacy-en" lang="en">
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: July 28, 2026</p>
+    <p class="updated">Last updated: August 10, 2026</p>
 
     <p>“Kotoba Forest” (the “App”; Android package and iOS bundle identifier
       <code>com.kotobaforest.app</code>) is developed and operated by an independent developer.
@@ -114,6 +115,10 @@
     <h2>Storage and Service Providers</h2>
     <ul>
       <li><strong>Supabase:</strong> database storage and account authentication</li>
+      <li><strong>PostHog (US Cloud):</strong> product analytics using a pseudonymous account identifier,
+        allowlisted App interaction events, and necessary App/platform version metadata for funnels, retention,
+        and measurement-health analysis. We do not send email addresses, phone numbers, purchase credentials,
+        free-form input, or advertising identifiers, and IP address storage is disabled</li>
       <li><strong>Google:</strong> optional Google sign-in and Google Play purchases on Android</li>
       <li><strong>Apple:</strong> optional Sign in with Apple and App Store purchases on iOS</li>
       <li><strong>Content delivery services:</strong> delivery of static learning assets such as prerecorded
@@ -133,7 +138,8 @@
         <a href="mailto:stevenhuang42195@gmail.com">stevenhuang42195@gmail.com</a> with the subject
         “Account deletion request” and include your registered email address.</li>
     </ol>
-    <p>We complete deletion within seven business days. Deleted progress cannot be restored. Deleting your
+    <p>We complete deletion within seven business days, including deletion of associated Supabase and PostHog
+      data using the same pseudonymous account identifier. Deleted progress cannot be restored. Deleting your
       Kotoba Forest account does not automatically cancel a store subscription; cancel VIP separately in Google
       Play or the Apple App Store to avoid future charges.</p>
 
