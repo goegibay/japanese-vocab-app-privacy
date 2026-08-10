@@ -34,7 +34,7 @@
     <li><strong>帳號資訊</strong>：首次使用時本 App 會建立匿名帳號（不需提供任何個人資訊）。當您選擇以 Email、Google 帳號或 Sign in with Apple 註冊／登入時，我們會儲存登入服務提供的帳號識別碼及 Email 地址（若您選擇「隱藏我的電子郵件」，可能是 Apple 提供的轉寄地址），用於帳號識別、登入驗證與跨裝置進度備份。</li>
     <li><strong>學習進度資料</strong>：包含您的單字複習紀錄（間隔複習階段、下次複習時間）、連續學習天數、種子與語彙果數量、已擁有與放置的角色、森林狀態等，用於提供個人化的學習功能。</li>
     <li><strong>購買資訊</strong>：若您訂閱 VIP 會員，付款由 Google Play 或 Apple App Store 處理；我們會接收購買憑證、商品方案、訂閱平台與有效期間，用於驗證及維護會員狀態，但<strong>不會取得</strong>您的信用卡號或完整付款帳戶資訊。</li>
-    <li><strong>匿名使用數據</strong>：為了改善產品，我們會記錄匿名的 App 互動事件（例如完成一次複習、開始一次測驗等操作類型與發生時間），並以帳號的假名化識別碼（pseudonymous ID）關聯。這些事件<strong>不包含</strong>任何個人身分資訊、輸入內容或裝置廣告 ID，僅用於彙總統計與功能改善分析。</li>
+    <li><strong>假名化使用數據</strong>：為了改善產品，我們會記錄有限的 App 互動事件（例如完成一次複習、開始一次測驗等操作類型與發生時間），並以帳號的假名化識別碼（pseudonymous ID）關聯；分析資料也可能包含 App／平台版本，以及訂閱基礎設施提供的最後出現國家層級推定。這不是精準位置，可能受 VPN、模擬器或網路環境影響。這些事件<strong>不包含</strong>姓名、Email、電話、自由輸入、購買憑證、裝置廣告 ID 或精準位置，僅用於彙總統計、漏斗與功能改善分析。</li>
   </ul>
   <p>本 App <strong>不顯示廣告</strong>，不使用廣告 SDK，也不會蒐集裝置廣告 ID。</p>
 
@@ -49,7 +49,8 @@
   <p>本 App 使用以下第三方服務來儲存與處理資料：</p>
   <ul>
     <li><strong>Supabase</strong>（資料庫與帳號驗證）：儲存您的帳號資訊與學習進度資料</li>
-    <li><strong>PostHog</strong>（產品分析，US Cloud）：接收帳號的假名化識別碼、白名單內的 App 互動事件與必要的 App／平台版本資訊，用於漏斗、留存及量測健康分析；不接收 Email、電話、購買憑證、自由輸入、裝置廣告 ID，且已停用 IP 位址儲存</li>
+    <li><strong>RevenueCat</strong>（訂閱與會員權益管理）：以假名化帳號識別碼處理訂閱狀態與購買驗證資料，並提供最後出現的國家層級推定與 App／平台版本資訊；國家層級推定不是 GPS 或精準位置</li>
+    <li><strong>PostHog</strong>（產品分析，US Cloud）：接收帳號的假名化識別碼、白名單內的 App 互動事件、必要的 App／平台版本資訊，以及 RevenueCat 提供的最後出現國家層級推定，用於漏斗、留存及量測健康分析；不接收 Email、電話、購買憑證、自由輸入、裝置廣告 ID 或精準位置，且已停用 IP 位址儲存</li>
     <li><strong>Google</strong>（Google 登入、Google Play 應用程式內購買）：在您選用時處理登入或 Android VIP 訂閱付款</li>
     <li><strong>Apple</strong>（Sign in with Apple、App Store 應用程式內購買）：在您選用時處理登入或 iOS VIP 訂閱付款</li>
     <li><strong>內容傳遞服務</strong>：傳遞預錄發音等靜態學習資產；不會向該服務傳送您的帳號資料或學習進度</li>
@@ -99,9 +100,11 @@
         payments. We receive a purchase credential, product tier, purchase platform, and entitlement period to
         verify and maintain VIP access. We do not receive or store your credit card number or full payment account details.</li>
       <li><strong>Pseudonymous usage data:</strong> We record limited in-app interaction events, such as starting
-        a quiz or completing a review, together with the event time and a pseudonymous account identifier. These
-        events do not contain free-form input, advertising identifiers, or direct identity details and are used
-        for aggregate analytics and product improvement.</li>
+        a quiz or completing a review, together with the event time and a pseudonymous account identifier. Analytics
+        data may also include App/platform versions and a last-seen country-level estimate supplied by our subscription
+        infrastructure. This is not precise location and may be affected by VPNs, emulators, or network conditions.
+        These events do not contain names, email addresses, phone numbers, free-form input, purchase credentials,
+        advertising identifiers, or precise location and are used for aggregate analytics, funnels, and product improvement.</li>
     </ul>
     <p>The App has no advertising, does not use advertising SDKs, and does not collect an advertising identifier.</p>
 
@@ -115,10 +118,14 @@
     <h2>Storage and Service Providers</h2>
     <ul>
       <li><strong>Supabase:</strong> database storage and account authentication</li>
+      <li><strong>RevenueCat:</strong> subscription and entitlement management using a pseudonymous account identifier,
+        purchase-verification data, and last-seen country-level and App/platform version metadata. The country-level
+        estimate is not GPS or precise location</li>
       <li><strong>PostHog (US Cloud):</strong> product analytics using a pseudonymous account identifier,
-        allowlisted App interaction events, and necessary App/platform version metadata for funnels, retention,
-        and measurement-health analysis. We do not send email addresses, phone numbers, purchase credentials,
-        free-form input, or advertising identifiers, and IP address storage is disabled</li>
+        allowlisted App interaction events, necessary App/platform version metadata, and RevenueCat's last-seen
+        country-level estimate for funnels, retention, and measurement-health analysis. We do not send email addresses,
+        phone numbers, purchase credentials, free-form input, advertising identifiers, or precise location, and IP
+        address storage is disabled</li>
       <li><strong>Google:</strong> optional Google sign-in and Google Play purchases on Android</li>
       <li><strong>Apple:</strong> optional Sign in with Apple and App Store purchases on iOS</li>
       <li><strong>Content delivery services:</strong> delivery of static learning assets such as prerecorded
