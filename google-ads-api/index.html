@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Google Ads API Use - Kotoba Forest</title>
+<meta name="description" content="How Kotoba Forest uses the Google Ads API for a private, read-only internal reporting tool." />
+<style>
+  :root {
+    color-scheme: light;
+    --green: #176345;
+    --mint: #eaf8f1;
+    --border: #c9e8d7;
+    --text: #25332e;
+    --muted: #60736b;
+    --navy: #173454;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.65;
+    color: var(--text);
+    background: #f7fbf9;
+  }
+  main {
+    width: min(820px, calc(100% - 32px));
+    margin: 0 auto;
+    padding: 40px 0 64px;
+  }
+  header {
+    padding: 30px;
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    background: var(--mint);
+  }
+  nav { margin-bottom: 24px; font-size: 14px; }
+  nav a { margin-right: 16px; }
+  h1 {
+    margin: 0 0 8px;
+    color: var(--navy);
+    font-size: clamp(30px, 6vw, 44px);
+    line-height: 1.15;
+  }
+  h2 { margin-top: 36px; color: var(--green); font-size: 23px; }
+  p { margin: 10px 0; }
+  a { color: var(--green); }
+  .eyebrow {
+    margin: 0 0 8px;
+    color: var(--green);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+  }
+  .subtitle { color: var(--muted); font-size: 18px; }
+  .updated { color: var(--muted); font-size: 14px; }
+  .badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+  }
+  .badge {
+    padding: 6px 12px;
+    border: 1px solid #9fcfb4;
+    border-radius: 999px;
+    color: var(--green);
+    background: #fff;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  .card {
+    margin-top: 18px;
+    padding: 20px 22px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: #fff;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+    background: #fff;
+  }
+  th, td {
+    padding: 12px 14px;
+    border: 1px solid var(--border);
+    text-align: left;
+    vertical-align: top;
+  }
+  th { color: #fff; background: var(--navy); }
+  ul { padding-left: 22px; }
+  li { margin: 7px 0; }
+  footer {
+    margin-top: 46px;
+    padding-top: 18px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 14px;
+  }
+  @media (max-width: 620px) {
+    header { padding: 24px 20px; }
+    table, thead, tbody, tr, th, td { display: block; }
+    thead { display: none; }
+    tr { margin-bottom: 12px; border: 1px solid var(--border); }
+    td { border: 0; border-bottom: 1px solid var(--border); }
+    td:last-child { border-bottom: 0; }
+    td::before {
+      display: block;
+      margin-bottom: 3px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    td:nth-child(1)::before { content: "Operation"; }
+    td:nth-child(2)::before { content: "Implementation"; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <nav aria-label="Kotoba Forest pages">
+    <a href="../brand.html">Product overview</a>
+    <a href="../">Privacy policy</a>
+    <a href="../support/">Support</a>
+  </nav>
+
+  <header>
+    <p class="eyebrow">Kotoba Forest · Google Ads API</p>
+    <h1>Internal reporting tool</h1>
+    <p class="subtitle">A private, read-only utility used by the Kotoba Forest owner to measure advertising performance for the Kotoba Forest mobile app.</p>
+    <div class="badges" aria-label="Tool characteristics">
+      <span class="badge">Read-only</span>
+      <span class="badge">Internal use</span>
+      <span class="badge">One owned advertiser</span>
+      <span class="badge">No external users</span>
+    </div>
+    <p class="updated">Last updated: August 11, 2026</p>
+  </header>
+
+  <h2>Business and product</h2>
+  <p><strong>Kotoba Forest（言葉森林）</strong> is an independently developed consumer mobile application for learning Japanese vocabulary and preparing for the JLPT. The App uses spaced repetition, mock tests, and a forest-growing game loop. It is available as a free download with an optional VIP subscription.</p>
+  <p>Kotoba Forest advertises only its own mobile app through its own Google Ads account. The Google Ads API tool is not part of the consumer App and is not a product offered to customers.</p>
+  <p><a href="../brand.html">View the Kotoba Forest product overview</a> or <a href="https://play.google.com/store/apps/details?id=com.kotobaforest.app">view the Android app on Google Play</a>.</p>
+
+  <h2>API purpose and users</h2>
+  <div class="card">
+    <p>The proposed API client replaces repetitive manual exports from the Google Ads interface. The App owner runs a local reporting script to retrieve campaign performance, spend, conversion, and app-install reporting data, then uses the resulting internal report to make manual campaign decisions.</p>
+    <p><strong>Only the owner/developer uses this tool.</strong> There are no customers, agency clients, public users, user accounts, external sign-in flow, public dashboard, client portal, or downstream API.</p>
+  </div>
+
+  <h2>Supported operations</h2>
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">Operation</th>
+        <th scope="col">Implementation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Reporting</td>
+        <td>Read-only GoogleAdsService Search or SearchStream requests using GAQL.</td>
+      </tr>
+      <tr>
+        <td>Account metadata</td>
+        <td>Read customer, campaign, ad group, and asset metadata needed to label internal reports.</td>
+      </tr>
+      <tr>
+        <td>Campaign changes</td>
+        <td>No mutate methods are implemented. Campaign creation, budgets, targeting, and all other edits remain manual in the Google Ads interface.</td>
+      </tr>
+      <tr>
+        <td>Account scope</td>
+        <td>Restricted to one advertising account owned by the applicant and linked under the applicant's manager account. The tool does not manage third-party accounts.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Data flow and safeguards</h2>
+  <ol>
+    <li>The owner starts the local reporting script on an authorized computer.</li>
+    <li>Google OAuth 2.0 authorizes access to the owner's Google Ads account.</li>
+    <li>Read-only GAQL queries retrieve explicit reporting fields for an explicit date range.</li>
+    <li>The script aggregates results into a local console or report.</li>
+    <li>The owner reviews the report and makes any advertising changes manually in Google Ads.</li>
+  </ol>
+  <ul>
+    <li>OAuth refresh credentials and the developer token are stored outside source control and are never written to reports, logs, or the mobile App.</li>
+    <li>The tool processes aggregate advertising performance only. It does not retrieve personal identifiers, Customer Match lists, or remarketing audiences.</li>
+    <li>Raw responses remain in memory during a run; optional reports remain on the owner's computer.</li>
+    <li>Google Ads API data is not sold, shared, exposed publicly, uploaded to third-party analytics, or used to build user profiles.</li>
+  </ul>
+
+  <h2>Contact and policies</h2>
+  <p>For questions about this integration, contact <a href="mailto:stevenhuang42195@gmail.com">stevenhuang42195@gmail.com</a>.</p>
+  <p><a href="../">Kotoba Forest privacy policy</a> · <a href="../support/">Kotoba Forest support</a></p>
+
+  <footer>
+    <p>Kotoba Forest（言葉森林） · Android package <code>com.kotobaforest.app</code></p>
+  </footer>
+</main>
+</body>
+</html>
