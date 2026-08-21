@@ -17,15 +17,28 @@
   h2 { font-size: 20px; margin-top: 32px; border-left: 4px solid #2e7d32; padding-left: 10px; }
   .updated { color: #888; font-size: 14px; margin-bottom: 24px; }
   .language-divider { margin: 52px 0 36px; border: 0; border-top: 1px solid #c8e6c9; }
+  .language-nav { margin-bottom: 24px; }
+  .language-nav a { display: inline-block; margin: 0 12px 6px 0; }
+  section { scroll-margin-top: 24px; }
   ul, ol { padding-left: 20px; }
   li { margin-bottom: 6px; }
   a { color: #2e7d32; }
 </style>
 </head>
 <body>
+  <nav class="language-nav" aria-label="Language">
+    <a href="#privacy-zh-Hant">繁體中文</a>
+    <a href="#privacy-zh-Hans">简体中文</a>
+    <a href="#privacy-en">English</a>
+    <a href="#privacy-ko">한국어</a>
+    <a href="#privacy-th">ไทย</a>
+    <a href="#privacy-vi">Tiếng Việt</a>
+    <a href="#privacy-id">Bahasa Indonesia</a>
+  </nav>
+
+  <section id="privacy-zh-Hant" lang="zh-Hant">
   <h1>隱私權政策</h1>
-  <p class="updated">最後更新日期：2026-08-10</p>
-  <p><a href="#privacy-en">English version</a></p>
+  <p class="updated">最後更新日期：2026-08-21</p>
 
   <p>「言葉森林 Kotoba Forest」（以下稱「本 App」，Android 套件名稱及 iOS Bundle ID 均為 <code>com.kotobaforest.app</code>）由個人開發者開發與維運。本政策說明本 App 在您使用服務時，會蒐集哪些資訊、如何使用，以及您擁有的權利。</p>
 
@@ -37,6 +50,12 @@
     <li><strong>假名化使用數據</strong>：為了改善產品，我們會記錄有限的 App 互動事件（例如完成一次複習、開始一次測驗等操作類型與發生時間），並以帳號的假名化識別碼（pseudonymous ID）關聯；分析資料也可能包含 App／平台版本，以及訂閱基礎設施提供的最後出現國家層級推定。這不是精準位置，可能受 VPN、模擬器或網路環境影響。這些事件<strong>不包含</strong>姓名、Email、電話、自由輸入、購買憑證、裝置廣告 ID 或精準位置，僅用於彙總統計、漏斗與功能改善分析。</li>
   </ul>
   <p>本 App <strong>不顯示廣告</strong>，不使用廣告 SDK，也不會蒐集裝置廣告 ID。</p>
+
+  <h2>Firebase Analytics 與廣告成效衡量</h2>
+  <p>自 iOS 1.4.8 起，本 App 使用 Google Analytics for Firebase（GA4）了解 App 的整體使用情況，並衡量台灣 iOS 推廣活動是否帶來新的 App 開啟。本 App 內不顯示廣告；Firebase Analytics 是成效分析工具，不是用來在 App 內投放廣告的 SDK。</p>
+  <p>Firebase Analytics 會為每次 App 安裝自動建立一組隨機的 App Instance ID，並可能自動記錄 App 首次開啟（<code>first_open</code>）、版本更新、工作階段開始、使用時間、作業系統更新、StoreKit 購買或訂閱事件（例如商品編號、名稱、價格、幣別及數量），以及在啟用自動畫面報告時的畫面切換。它也可能從經遮罩處理的 IP 位址推定概略國家／地區，並收集裝置、作業系統、App 版本、Bundle ID 與開發平台等基本技術資訊；不使用 Apple 定位服務取得精準位置。</p>
+  <p>我們只把 <code>first_open</code> 匯入 Google Ads，作為本次台灣 iOS 推廣活動的新使用者轉換；不把購買、訂閱、學習內容或其他自訂事件設為 Google Ads 轉換、受眾或再行銷條件。我們不會把姓名、Email、電話、帳號 ID、學習答案、自由輸入或購買憑證傳給 Firebase Analytics，也不會使用 IDFA、IDFV、App Tracking Transparency、Google Signals、個人化廣告、跨 App 追蹤、Customer Match 或以聯絡資料進行裝置端轉換衡量。</p>
+  <p>GA4 的事件層級及使用者層級資料保留期間設定為 2 個月；標準彙總報表不受相同保留期限限制。App Instance ID 不與您的言葉森林帳號或廣告識別碼連結，因此無法用 Email 或帳號 ID 查回這些匿名安裝層級事件；既有事件會依上述保留設定到期。若您對此類資料有疑問，可透過本政策所列 Email 聯絡我們。</p>
 
   <h2>我們如何使用這些資訊</h2>
   <ul>
@@ -51,6 +70,7 @@
     <li><strong>Supabase</strong>（資料庫與帳號驗證）：儲存您的帳號資訊與學習進度資料</li>
     <li><strong>RevenueCat</strong>（訂閱與會員權益管理）：以假名化帳號識別碼處理訂閱狀態與購買驗證資料，並提供最後出現的國家層級推定與 App／平台版本資訊；國家層級推定不是 GPS 或精準位置</li>
     <li><strong>PostHog</strong>（產品分析，US Cloud）：接收帳號的假名化識別碼、白名單內的 App 互動事件、必要的 App／平台版本資訊，以及 RevenueCat 提供的最後出現國家層級推定，用於漏斗、留存及量測健康分析；不接收 Email、電話、購買憑證、自由輸入、裝置廣告 ID 或精準位置，且已停用 IP 位址儲存</li>
+    <li><strong>Google Analytics for Firebase（GA4）</strong>：以隨機 App Instance ID 處理 App 生命週期、工作階段、互動、StoreKit 購買／訂閱及概略地區與基本技術資訊，用於彙總分析；僅將 <code>first_open</code> 匯入 Google Ads 衡量台灣 iOS 推廣活動。不使用 IDFA／IDFV、個人化廣告或跨 App 追蹤。</li>
     <li><strong>Google</strong>（Google 登入、Google Play 應用程式內購買）：在您選用時處理登入或 Android VIP 訂閱付款</li>
     <li><strong>Apple</strong>（Sign in with Apple、App Store 應用程式內購買）：在您選用時處理登入或 iOS VIP 訂閱付款</li>
     <li><strong>內容傳遞服務</strong>：傳遞預錄發音等靜態學習資產；不會向該服務傳送您的帳號資料或學習進度</li>
@@ -77,12 +97,13 @@
   <h2>聯絡我們</h2>
   <p>若您對本隱私權政策或您的資料有任何疑問，歡迎透過以下方式聯絡我們：</p>
   <p>Email：<a href="mailto:stevenhuang42195@gmail.com">stevenhuang42195@gmail.com</a></p>
+  </section>
 
   <hr class="language-divider" />
 
   <section id="privacy-en" lang="en">
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: August 10, 2026</p>
+    <p class="updated">Last updated: August 21, 2026</p>
 
     <p>“Kotoba Forest” (the “App”; Android package and iOS bundle identifier
       <code>com.kotobaforest.app</code>) is developed and operated by an independent developer.
@@ -108,6 +129,12 @@
     </ul>
     <p>The App has no advertising, does not use advertising SDKs, and does not collect an advertising identifier.</p>
 
+    <h2>Firebase Analytics and campaign measurement</h2>
+    <p>Beginning with iOS 1.4.8, the App uses Google Analytics for Firebase (GA4) to understand aggregate App usage and measure whether our Taiwan iOS promotion results in new App opens. The App does not display ads. Firebase Analytics is a measurement service, not an SDK used to serve ads inside the App.</p>
+    <p>Firebase Analytics automatically creates a random App Instance ID for each installation and may automatically record the first App open (<code>first_open</code>), app updates, session starts, engagement time, operating-system updates, StoreKit purchase or subscription events (such as product ID, product name, price, currency, and quantity), and screen transitions when automatic screen reporting is enabled. It may also derive a general country or region from a masked IP address and collect basic device, operating-system, App-version, bundle-ID, and developer-platform information. It does not use Apple Location Services to obtain precise location.</p>
+    <p>We import only <code>first_open</code> into Google Ads as the new-user conversion for this Taiwan iOS promotion. We do not use purchases, subscriptions, learning content, or other custom events as Google Ads conversions, audiences, or remarketing conditions. We do not send names, email addresses, phone numbers, account IDs, learning answers, free-form input, or purchase credentials to Firebase Analytics. We do not use IDFA, IDFV, App Tracking Transparency, Google Signals, personalized advertising, cross-app tracking, Customer Match, or contact-information-based on-device conversion measurement.</p>
+    <p>GA4 event-level and user-level data retention is set to two months. Standard aggregate reports are not subject to the same retention period. The App Instance ID is not linked to your Kotoba Forest account or an advertising identifier, so these anonymous installation-level events cannot be retrieved using an email address or account ID; existing events expire under the retention setting above. Contact us at the email address in this policy if you have questions about this data.</p>
+
     <h2>How We Use Information</h2>
     <ul>
       <li>Provide, maintain, and improve vocabulary learning, spaced review, forest, and character features</li>
@@ -126,6 +153,10 @@
         country-level estimate for funnels, retention, and measurement-health analysis. We do not send email addresses,
         phone numbers, purchase credentials, free-form input, advertising identifiers, or precise location, and IP
         address storage is disabled</li>
+      <li><strong>Google Analytics for Firebase (GA4):</strong> processes App lifecycle, session, interaction,
+        StoreKit purchase/subscription, general-region, and basic technical information under a random App Instance ID
+        for aggregate analytics. Only <code>first_open</code> is imported into Google Ads to measure the Taiwan iOS
+        promotion. IDFA, IDFV, personalized advertising, and cross-app tracking are not used.</li>
       <li><strong>Google:</strong> optional Google sign-in and Google Play purchases on Android</li>
       <li><strong>Apple:</strong> optional Sign in with Apple and App Store purchases on iOS</li>
       <li><strong>Content delivery services:</strong> delivery of static learning assets such as prerecorded
@@ -164,6 +195,71 @@
     <h2>Contact Us</h2>
     <p>For privacy or data questions, email
       <a href="mailto:stevenhuang42195@gmail.com">stevenhuang42195@gmail.com</a>.</p>
+  </section>
+
+  <hr class="language-divider" />
+
+  <section id="privacy-zh-Hans" lang="zh-Hans">
+    <h1>Firebase Analytics 与广告效果衡量</h1>
+    <p class="updated">最后更新日期：2026-08-21</p>
+
+    <p>自 iOS 1.4.8 起，本 App 使用 Google Analytics for Firebase（GA4）了解 App 的整体使用情况，并衡量台湾 iOS 推广活动是否带来新的 App 打开。本 App 内不显示广告；Firebase Analytics 是效果分析工具，不是用于在 App 内投放广告的 SDK。</p>
+    <p>Firebase Analytics 会为每次 App 安装自动建立一个随机的 App Instance ID，并可能自动记录 App 首次打开（<code>first_open</code>）、版本更新、会话开始、使用时长、操作系统更新、StoreKit 购买或订阅事件（例如商品编号、名称、价格、币种及数量），以及在启用自动屏幕报告时的屏幕切换。它也可能根据经过掩码处理的 IP 地址推断大致国家／地区，并收集设备、操作系统、App 版本、Bundle ID 与开发平台等基本技术信息；不会使用 Apple 定位服务取得精确位置。</p>
+    <p>我们只将 <code>first_open</code> 导入 Google Ads，作为本次台湾 iOS 推广活动的新用户转化；不会将购买、订阅、学习内容或其他自定义事件设为 Google Ads 转化、受众或再营销条件。我们不会将姓名、Email、电话号码、账号 ID、学习答案、自由输入或购买凭证发送给 Firebase Analytics，也不会使用 IDFA、IDFV、App Tracking Transparency、Google Signals、个性化广告、跨 App 跟踪、Customer Match 或使用联系资料进行设备端转化衡量。</p>
+    <p>GA4 的事件级和用户级数据保留期设为 2 个月；标准汇总报告不受相同保留期限限制。App Instance ID 不会与您的言叶森林账号或广告标识符关联，因此无法通过 Email 或账号 ID 找回这些匿名安装级事件；既有事件将按上述保留设置到期。如对此类数据有疑问，可通过本政策列出的 Email 联系我们。</p>
+    <p><strong>Google Analytics for Firebase（GA4）</strong>：使用随机 App Instance ID 处理 App 生命周期、会话、互动、StoreKit 购买／订阅、大致地区及基本技术信息，用于汇总分析；仅将 <code>first_open</code> 导入 Google Ads 衡量台湾 iOS 推广活动。不使用 IDFA／IDFV、个性化广告或跨 App 跟踪。</p>
+  </section>
+
+  <hr class="language-divider" />
+
+  <section id="privacy-ko" lang="ko">
+    <h1>Firebase Analytics 및 광고 성과 측정</h1>
+    <p class="updated">최종 업데이트: 2026-08-21</p>
+
+    <p>iOS 1.4.8부터 본 앱은 전반적인 앱 이용 현황을 파악하고 대만 iOS 프로모션을 통해 새 앱 실행이 발생했는지 측정하기 위해 Google Analytics for Firebase(GA4)를 사용합니다. 본 앱에는 광고가 표시되지 않습니다. Firebase Analytics는 앱 안에 광고를 게재하는 SDK가 아니라 성과 측정 도구입니다.</p>
+    <p>Firebase Analytics는 설치마다 무작위 App Instance ID를 자동으로 생성하며, 첫 실행(<code>first_open</code>), 앱 업데이트, 세션 시작, 이용 시간, 운영체제 업데이트, StoreKit 구매 또는 구독 이벤트(예: 상품 ID, 상품명, 가격, 통화 및 수량), 자동 화면 보고가 활성화된 경우 화면 전환을 자동으로 기록할 수 있습니다. 또한 마스킹된 IP 주소에서 대략적인 국가／지역을 추정하고 기기, 운영체제, 앱 버전, Bundle ID 및 개발 플랫폼과 같은 기본 기술 정보를 수집할 수 있습니다. Apple 위치 서비스를 사용하여 정확한 위치를 수집하지 않습니다.</p>
+    <p>Google Ads에는 이번 대만 iOS 프로모션의 신규 사용자 전환으로 <code>first_open</code>만 가져옵니다. 구매, 구독, 학습 내용 또는 기타 맞춤 이벤트를 Google Ads 전환, 잠재고객 또는 리마케팅 조건으로 사용하지 않습니다. 이름, 이메일, 전화번호, 계정 ID, 학습 답변, 자유 입력 내용 또는 구매 증빙을 Firebase Analytics로 보내지 않습니다. IDFA, IDFV, App Tracking Transparency, Google Signals, 개인 맞춤 광고, 앱 간 추적, Customer Match 또는 연락처 정보 기반 온디바이스 전환 측정도 사용하지 않습니다.</p>
+    <p>GA4의 이벤트 수준 및 사용자 수준 데이터 보관 기간은 2개월로 설정됩니다. 표준 집계 보고서에는 같은 보관 기간이 적용되지 않습니다. App Instance ID는 Kotoba Forest 계정이나 광고 식별자와 연결되지 않으므로 이메일 또는 계정 ID로 이러한 익명 설치 수준 이벤트를 조회할 수 없으며, 기존 이벤트는 위 보관 설정에 따라 만료됩니다. 이 데이터에 관한 문의는 본 정책에 기재된 이메일로 연락해 주세요.</p>
+    <p><strong>Google Analytics for Firebase(GA4)</strong>: 무작위 App Instance ID를 사용하여 앱 수명 주기, 세션, 상호작용, StoreKit 구매／구독, 대략적인 지역 및 기본 기술 정보를 집계 분석 목적으로 처리합니다. 대만 iOS 프로모션 측정을 위해 <code>first_open</code>만 Google Ads로 가져옵니다. IDFA／IDFV, 개인 맞춤 광고 및 앱 간 추적은 사용하지 않습니다.</p>
+  </section>
+
+  <hr class="language-divider" />
+
+  <section id="privacy-th" lang="th">
+    <h1>Firebase Analytics และการวัดผลแคมเปญโฆษณา</h1>
+    <p class="updated">อัปเดตล่าสุด: 2026-08-21</p>
+
+    <p>ตั้งแต่ iOS 1.4.8 เป็นต้นไป แอปจะใช้ Google Analytics for Firebase (GA4) เพื่อทำความเข้าใจการใช้งานแอปในภาพรวมและวัดว่าแคมเปญ iOS ในไต้หวันทำให้เกิดการเปิดแอปใหม่หรือไม่ แอปนี้ไม่แสดงโฆษณาภายในแอป และ Firebase Analytics เป็นเครื่องมือวัดผล ไม่ใช่ SDK สำหรับแสดงโฆษณาในแอป</p>
+    <p>Firebase Analytics จะสร้าง App Instance ID แบบสุ่มให้กับการติดตั้งแต่ละครั้งโดยอัตโนมัติ และอาจบันทึกการเปิดแอปครั้งแรก (<code>first_open</code>), การอัปเดตแอป, การเริ่มเซสชัน, ระยะเวลาการใช้งาน, การอัปเดตระบบปฏิบัติการ, เหตุการณ์การซื้อหรือการสมัครสมาชิกผ่าน StoreKit (เช่น รหัสสินค้า ชื่อสินค้า ราคา สกุลเงิน และจำนวน) รวมถึงการเปลี่ยนหน้าจอเมื่อเปิดใช้การรายงานหน้าจออัตโนมัติ นอกจากนี้ อาจประมาณประเทศ／ภูมิภาคโดยคร่าวจากที่อยู่ IP ที่ถูกปกปิด และเก็บข้อมูลทางเทคนิคพื้นฐาน เช่น อุปกรณ์ ระบบปฏิบัติการ เวอร์ชันแอป Bundle ID และแพลตฟอร์มที่ใช้พัฒนา โดยไม่ใช้บริการระบุตำแหน่งของ Apple เพื่อรับตำแหน่งที่แม่นยำ</p>
+    <p>เรานำเข้าเฉพาะ <code>first_open</code> ไปยัง Google Ads เพื่อใช้เป็นคอนเวอร์ชันผู้ใช้ใหม่ของแคมเปญ iOS ในไต้หวันนี้ เราไม่ใช้การซื้อ การสมัครสมาชิก เนื้อหาการเรียน หรือเหตุการณ์ที่กำหนดเองอื่น ๆ เป็นคอนเวอร์ชัน กลุ่มเป้าหมาย หรือเงื่อนไขรีมาร์เก็ตติ้งของ Google Ads เราไม่ส่งชื่อ อีเมล หมายเลขโทรศัพท์ ID บัญชี คำตอบการเรียน ข้อความที่ผู้ใช้กรอกเอง หรือหลักฐานการซื้อไปยัง Firebase Analytics และไม่ใช้ IDFA, IDFV, App Tracking Transparency, Google Signals, โฆษณาแบบปรับให้เหมาะกับบุคคล, การติดตามข้ามแอป, Customer Match หรือการวัดคอนเวอร์ชันบนอุปกรณ์ที่ใช้ข้อมูลติดต่อ</p>
+    <p>ระยะเวลาการเก็บข้อมูลระดับเหตุการณ์และระดับผู้ใช้ใน GA4 ตั้งไว้ที่ 2 เดือน รายงานมาตรฐานแบบรวมไม่อยู่ภายใต้ระยะเวลาเดียวกัน App Instance ID จะไม่เชื่อมโยงกับบัญชี Kotoba Forest หรือตัวระบุโฆษณา จึงไม่สามารถค้นคืนเหตุการณ์ระดับการติดตั้งแบบไม่ระบุตัวตนเหล่านี้ด้วยอีเมลหรือ ID บัญชีได้ และเหตุการณ์เดิมจะหมดอายุตามการตั้งค่าข้างต้น หากมีคำถามเกี่ยวกับข้อมูลนี้ โปรดติดต่อเราทางอีเมลที่ระบุไว้ในนโยบายนี้</p>
+    <p><strong>Google Analytics for Firebase (GA4)</strong>: ประมวลผลข้อมูลวงจรชีวิตแอป เซสชัน การโต้ตอบ การซื้อ／การสมัครสมาชิกผ่าน StoreKit ภูมิภาคโดยคร่าว และข้อมูลทางเทคนิคพื้นฐานภายใต้ App Instance ID แบบสุ่มเพื่อการวิเคราะห์แบบรวม โดยนำเข้าเฉพาะ <code>first_open</code> ไปยัง Google Ads เพื่อวัดผลแคมเปญ iOS ในไต้หวัน และไม่ใช้ IDFA／IDFV โฆษณาแบบปรับให้เหมาะกับบุคคล หรือการติดตามข้ามแอป</p>
+  </section>
+
+  <hr class="language-divider" />
+
+  <section id="privacy-vi" lang="vi">
+    <h1>Firebase Analytics và đo lường hiệu quả chiến dịch</h1>
+    <p class="updated">Cập nhật lần cuối: 2026-08-21</p>
+
+    <p>Kể từ iOS 1.4.8, Ứng dụng sử dụng Google Analytics for Firebase (GA4) để hiểu tình hình sử dụng tổng thể và đo lường liệu chiến dịch iOS tại Đài Loan có tạo ra lượt mở ứng dụng mới hay không. Ứng dụng không hiển thị quảng cáo. Firebase Analytics là công cụ đo lường, không phải SDK dùng để phân phối quảng cáo bên trong Ứng dụng.</p>
+    <p>Firebase Analytics tự động tạo một App Instance ID ngẫu nhiên cho mỗi lần cài đặt và có thể tự động ghi nhận lần mở đầu tiên (<code>first_open</code>), cập nhật ứng dụng, bắt đầu phiên, thời gian tương tác, cập nhật hệ điều hành, sự kiện mua hàng hoặc đăng ký qua StoreKit (ví dụ: mã sản phẩm, tên sản phẩm, giá, đơn vị tiền tệ và số lượng), cũng như chuyển màn hình khi tính năng báo cáo màn hình tự động được bật. Dịch vụ cũng có thể suy ra quốc gia／khu vực gần đúng từ địa chỉ IP đã được che và thu thập thông tin kỹ thuật cơ bản như thiết bị, hệ điều hành, phiên bản Ứng dụng, Bundle ID và nền tảng phát triển. Dịch vụ không dùng Apple Location Services để lấy vị trí chính xác.</p>
+    <p>Chúng tôi chỉ nhập <code>first_open</code> vào Google Ads làm lượt chuyển đổi người dùng mới cho chiến dịch iOS tại Đài Loan này. Chúng tôi không dùng giao dịch mua, đăng ký, nội dung học tập hoặc sự kiện tùy chỉnh khác làm lượt chuyển đổi, đối tượng hay điều kiện tiếp thị lại của Google Ads. Chúng tôi không gửi tên, địa chỉ email, số điện thoại, ID tài khoản, câu trả lời học tập, nội dung nhập tự do hoặc chứng từ mua hàng đến Firebase Analytics. Chúng tôi cũng không sử dụng IDFA, IDFV, App Tracking Transparency, Google Signals, quảng cáo được cá nhân hóa, theo dõi liên ứng dụng, Customer Match hoặc đo lường lượt chuyển đổi trên thiết bị dựa trên thông tin liên hệ.</p>
+    <p>Dữ liệu cấp sự kiện và cấp người dùng trong GA4 được đặt thời hạn lưu giữ là 2 tháng. Báo cáo tổng hợp tiêu chuẩn không chịu cùng thời hạn lưu giữ này. App Instance ID không được liên kết với tài khoản Kotoba Forest hoặc mã nhận dạng quảng cáo của bạn, vì vậy không thể truy xuất các sự kiện ẩn danh ở cấp cài đặt này bằng email hoặc ID tài khoản; các sự kiện hiện có sẽ hết hạn theo cài đặt lưu giữ nêu trên. Nếu có câu hỏi về dữ liệu này, vui lòng liên hệ qua địa chỉ email trong chính sách.</p>
+    <p><strong>Google Analytics for Firebase (GA4)</strong>: xử lý dữ liệu vòng đời ứng dụng, phiên, tương tác, mua hàng／đăng ký qua StoreKit, khu vực gần đúng và thông tin kỹ thuật cơ bản dưới một App Instance ID ngẫu nhiên để phân tích tổng hợp. Chỉ <code>first_open</code> được nhập vào Google Ads để đo lường chiến dịch iOS tại Đài Loan. Không sử dụng IDFA／IDFV, quảng cáo được cá nhân hóa hoặc theo dõi liên ứng dụng.</p>
+  </section>
+
+  <hr class="language-divider" />
+
+  <section id="privacy-id" lang="id">
+    <h1>Firebase Analytics dan pengukuran kampanye</h1>
+    <p class="updated">Terakhir diperbarui: 2026-08-21</p>
+
+    <p>Mulai iOS 1.4.8, Aplikasi menggunakan Google Analytics for Firebase (GA4) untuk memahami penggunaan Aplikasi secara agregat dan mengukur apakah promosi iOS di Taiwan menghasilkan pembukaan Aplikasi baru. Aplikasi tidak menampilkan iklan. Firebase Analytics adalah layanan pengukuran, bukan SDK untuk menayangkan iklan di dalam Aplikasi.</p>
+    <p>Firebase Analytics secara otomatis membuat App Instance ID acak untuk setiap instalasi dan dapat otomatis mencatat pembukaan pertama (<code>first_open</code>), pembaruan aplikasi, awal sesi, waktu interaksi, pembaruan sistem operasi, peristiwa pembelian atau langganan melalui StoreKit (seperti ID produk, nama produk, harga, mata uang, dan jumlah), serta perpindahan layar jika pelaporan layar otomatis diaktifkan. Layanan ini juga dapat memperkirakan negara／wilayah umum dari alamat IP yang disamarkan dan mengumpulkan informasi teknis dasar seperti perangkat, sistem operasi, versi Aplikasi, Bundle ID, dan platform pengembangan. Layanan ini tidak menggunakan Apple Location Services untuk memperoleh lokasi presisi.</p>
+    <p>Kami hanya mengimpor <code>first_open</code> ke Google Ads sebagai konversi pengguna baru untuk promosi iOS di Taiwan ini. Kami tidak menggunakan pembelian, langganan, konten pembelajaran, atau peristiwa kustom lainnya sebagai konversi, audiens, atau ketentuan pemasaran ulang Google Ads. Kami tidak mengirim nama, alamat email, nomor telepon, ID akun, jawaban pembelajaran, masukan bebas, atau bukti pembelian ke Firebase Analytics. Kami juga tidak menggunakan IDFA, IDFV, App Tracking Transparency, Google Signals, iklan yang dipersonalisasi, pelacakan lintas aplikasi, Customer Match, atau pengukuran konversi di perangkat yang memakai informasi kontak.</p>
+    <p>Retensi data tingkat peristiwa dan tingkat pengguna di GA4 ditetapkan selama 2 bulan. Laporan agregat standar tidak tunduk pada jangka retensi yang sama. App Instance ID tidak ditautkan ke akun Kotoba Forest atau pengenal iklan Anda, sehingga peristiwa anonim tingkat instalasi ini tidak dapat diambil menggunakan email atau ID akun; peristiwa yang sudah ada akan kedaluwarsa sesuai pengaturan retensi di atas. Hubungi kami melalui alamat email dalam kebijakan ini jika Anda memiliki pertanyaan tentang data tersebut.</p>
+    <p><strong>Google Analytics for Firebase (GA4)</strong>: memproses informasi siklus hidup Aplikasi, sesi, interaksi, pembelian／langganan StoreKit, wilayah umum, dan informasi teknis dasar dengan App Instance ID acak untuk analitik agregat. Hanya <code>first_open</code> yang diimpor ke Google Ads untuk mengukur promosi iOS di Taiwan. IDFA／IDFV, iklan yang dipersonalisasi, dan pelacakan lintas aplikasi tidak digunakan.</p>
   </section>
 </body>
 </html>
