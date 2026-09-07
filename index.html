@@ -38,7 +38,7 @@
 
   <section id="privacy-zh-Hant" lang="zh-Hant">
   <h1>隱私權政策</h1>
-  <p class="updated">最後更新日期：2026-08-21</p>
+  <p class="updated">最後更新日期：2026-09-08</p>
 
   <p>「言葉森林 Kotoba Forest」（以下稱「本 App」，Android 套件名稱及 iOS Bundle ID 均為 <code>com.kotobaforest.app</code>）由個人開發者開發與維運。本政策說明本 App 在您使用服務時，會蒐集哪些資訊、如何使用，以及您擁有的權利。</p>
 
@@ -48,6 +48,7 @@
     <li><strong>學習進度資料</strong>：包含您的單字複習紀錄（間隔複習階段、下次複習時間）、連續學習天數、種子與語彙果數量、已擁有與放置的角色、森林狀態等，用於提供個人化的學習功能。</li>
     <li><strong>購買資訊</strong>：若您訂閱 VIP 會員，付款由 Google Play 或 Apple App Store 處理；我們會接收購買憑證、商品方案、訂閱平台與有效期間，用於驗證及維護會員狀態，但<strong>不會取得</strong>您的信用卡號或完整付款帳戶資訊。</li>
     <li><strong>假名化使用數據</strong>：為了改善產品，我們會記錄有限的 App 互動事件（例如完成一次複習、開始一次測驗等操作類型與發生時間），並以帳號的假名化識別碼（pseudonymous ID）關聯；分析資料也可能包含 App／平台版本，以及訂閱基礎設施提供的最後出現國家層級推定。這不是精準位置，可能受 VPN、模擬器或網路環境影響。這些事件<strong>不包含</strong>姓名、Email、電話、自由輸入、購買憑證、裝置廣告 ID 或精準位置，僅用於彙總統計、漏斗與功能改善分析。</li>
+    <li><strong>裝置與顯示設定</strong>：為了分析相容性與改善產品，我們可能記錄經粗化的螢幕與視窗尺寸、安全區域、系統字級與像素密度級距、裝置品牌與類型、性能級距（裝置年份與記憶體級距）、作業系統主版本、語系／地區／時區，以及是否為實機。這些資料會與假名化帳號識別碼關聯。我們明確不會蒐集裝置廣告 ID、裝置序號、網路位址、使用者自訂裝置名稱、精確型號、儲存空間或輔助使用功能開關。</li>
   </ul>
   <p>本 App <strong>不顯示廣告</strong>，不使用廣告 SDK，也不會蒐集裝置廣告 ID。</p>
 
@@ -69,7 +70,7 @@
   <ul>
     <li><strong>Supabase</strong>（資料庫與帳號驗證）：儲存您的帳號資訊與學習進度資料</li>
     <li><strong>RevenueCat</strong>（訂閱與會員權益管理）：以假名化帳號識別碼處理訂閱狀態與購買驗證資料，並提供最後出現的國家層級推定與 App／平台版本資訊；國家層級推定不是 GPS 或精準位置</li>
-    <li><strong>PostHog</strong>（產品分析，US Cloud）：接收帳號的假名化識別碼、白名單內的 App 互動事件、必要的 App／平台版本資訊，以及 RevenueCat 提供的最後出現國家層級推定，用於漏斗、留存及量測健康分析；不接收 Email、電話、購買憑證、自由輸入、裝置廣告 ID 或精準位置，且已停用 IP 位址儲存</li>
+    <li><strong>PostHog</strong>（產品分析，US Cloud）：接收帳號的假名化識別碼、白名單內的 App 互動事件、必要的 App／平台版本資訊、RevenueCat 提供的最後出現國家層級推定，以及經粗化的裝置與顯示設定，用於漏斗、留存及量測健康分析；不接收 Email、電話、購買憑證、自由輸入、裝置廣告 ID 或精準位置，且已停用 IP 位址儲存</li>
     <li><strong>Google Analytics for Firebase（GA4）</strong>：以隨機 App Instance ID 處理 App 生命週期、工作階段、互動、StoreKit 購買／訂閱及概略地區與基本技術資訊，用於彙總分析；僅將 <code>first_open</code> 匯入 Google Ads 衡量台灣 iOS 推廣活動。不使用 IDFA／IDFV、個人化廣告或跨 App 追蹤。</li>
     <li><strong>Google</strong>（Google 登入、Google Play 應用程式內購買）：在您選用時處理登入或 Android VIP 訂閱付款</li>
     <li><strong>Apple</strong>（Sign in with Apple、App Store 應用程式內購買）：在您選用時處理登入或 iOS VIP 訂閱付款</li>
@@ -103,7 +104,7 @@
 
   <section id="privacy-en" lang="en">
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: August 21, 2026</p>
+    <p class="updated">Last updated: September 8, 2026</p>
 
     <p>“Kotoba Forest” (the “App”; Android package and iOS bundle identifier
       <code>com.kotobaforest.app</code>) is developed and operated by an independent developer.
@@ -126,6 +127,12 @@
         infrastructure. This is not precise location and may be affected by VPNs, emulators, or network conditions.
         These events do not contain names, email addresses, phone numbers, free-form input, purchase credentials,
         advertising identifiers, or precise location and are used for aggregate analytics, funnels, and product improvement.</li>
+      <li><strong>Device and display settings:</strong> To analyze compatibility and improve the product, we may record
+        coarse screen and window dimensions and safe-area insets, system font-size and pixel-density buckets, device brand
+        and type, performance tiers (device-year and memory buckets), operating-system major version, locale/region/time-zone
+        settings, and whether it is a physical device. This data is associated with a pseudonymous account identifier. We
+        do not collect advertising identifiers, device serial numbers, network addresses, user-assigned device names,
+        exact model names, storage capacity, or accessibility toggles.</li>
     </ul>
     <p>The App has no advertising, does not use advertising SDKs, and does not collect an advertising identifier.</p>
 
@@ -150,9 +157,9 @@
         estimate is not GPS or precise location</li>
       <li><strong>PostHog (US Cloud):</strong> product analytics using a pseudonymous account identifier,
         allowlisted App interaction events, necessary App/platform version metadata, and RevenueCat's last-seen
-        country-level estimate for funnels, retention, and measurement-health analysis. We do not send email addresses,
-        phone numbers, purchase credentials, free-form input, advertising identifiers, or precise location, and IP
-        address storage is disabled</li>
+        country-level estimate, as well as coarse device and display settings, for funnels, retention, and
+        measurement-health analysis. We do not send email addresses, phone numbers, purchase credentials, free-form input,
+        advertising identifiers, or precise location, and IP address storage is disabled</li>
       <li><strong>Google Analytics for Firebase (GA4):</strong> processes App lifecycle, session, interaction,
         StoreKit purchase/subscription, general-region, and basic technical information under a random App Instance ID
         for aggregate analytics. Only <code>first_open</code> is imported into Google Ads to measure the Taiwan iOS
@@ -201,7 +208,17 @@
 
   <section id="privacy-zh-Hans" lang="zh-Hans">
     <h1>Firebase Analytics 与广告效果衡量</h1>
-    <p class="updated">最后更新日期：2026-08-21</p>
+    <p class="updated">最后更新日期：2026-09-08</p>
+
+    <h2>我们收集的信息</h2>
+    <ul>
+      <li><strong>设备与显示设置</strong>：为了分析兼容性并改善产品，我们可能记录经粗化的屏幕与窗口尺寸、安全区域、系统字体大小与像素密度分档、设备品牌与类型、性能分档（设备年份与内存分档）、操作系统主版本、语言／地区／时区，以及是否为真实设备。这些数据会与假名化账号标识符关联。我们明确不会收集设备广告 ID、设备序列号、网络地址、用户自定义设备名称、精确型号、存储空间或辅助功能开关。</li>
+    </ul>
+
+    <h2>数据存储与第三方服务</h2>
+    <ul>
+      <li><strong>PostHog</strong>（产品分析，US Cloud）：接收账号的假名化标识符、白名单内的 App 互动事件、必要的 App／平台版本信息、RevenueCat 提供的最后出现国家级别推定，以及经粗化的设备与显示设置，用于漏斗、留存及测量健康分析；不接收 Email、电话、购买凭证、自由输入、设备广告 ID 或精确位置，且已停用 IP 地址存储。</li>
+    </ul>
 
     <p>自 iOS 1.4.8 起，本 App 使用 Google Analytics for Firebase（GA4）了解 App 的整体使用情况，并衡量台湾 iOS 推广活动是否带来新的 App 打开。本 App 内不显示广告；Firebase Analytics 是效果分析工具，不是用于在 App 内投放广告的 SDK。</p>
     <p>Firebase Analytics 会为每次 App 安装自动建立一个随机的 App Instance ID，并可能自动记录 App 首次打开（<code>first_open</code>）、版本更新、会话开始、使用时长、操作系统更新、StoreKit 购买或订阅事件（例如商品编号、名称、价格、币种及数量），以及在启用自动屏幕报告时的屏幕切换。它也可能根据经过掩码处理的 IP 地址推断大致国家／地区，并收集设备、操作系统、App 版本、Bundle ID 与开发平台等基本技术信息；不会使用 Apple 定位服务取得精确位置。</p>
@@ -214,7 +231,17 @@
 
   <section id="privacy-ko" lang="ko">
     <h1>Firebase Analytics 및 광고 성과 측정</h1>
-    <p class="updated">최종 업데이트: 2026-08-21</p>
+    <p class="updated">최종 업데이트: 2026-09-08</p>
+
+    <h2>수집하는 정보</h2>
+    <ul>
+      <li><strong>기기 및 디스플레이 설정:</strong> 호환성을 분석하고 제품을 개선하기 위해 구간화한 화면 및 창 크기와 안전 영역, 시스템 글꼴 크기 및 픽셀 밀도 구간, 기기 브랜드 및 유형, 성능 등급(기기 연도 구간 및 메모리 구간), 운영체제 주 버전, 언어／지역／시간대 설정, 실제 기기 여부를 기록할 수 있습니다. 이 데이터는 가명화된 계정 식별자와 연결됩니다. 광고 ID, 기기 일련번호, 네트워크 주소, 사용자가 지정한 기기 이름, 정확한 모델명, 저장 공간 또는 접근성 기능 설정은 수집하지 않습니다.</li>
+    </ul>
+
+    <h2>데이터 저장 및 서비스 제공자</h2>
+    <ul>
+      <li><strong>PostHog (US Cloud):</strong> 제품 분석을 위해 가명화된 계정 식별자, 허용 목록의 앱 상호작용 이벤트, 필요한 앱／플랫폼 버전 정보, RevenueCat이 제공하는 마지막 확인 국가 수준 추정치, 그리고 구간화한 기기 및 디스플레이 설정을 수신하여 퍼널, 유지율 및 측정 상태 분석에 사용합니다. 이메일, 전화번호, 구매 증빙, 자유 입력 내용, 광고 ID 또는 정확한 위치는 수신하지 않으며 IP 주소 저장은 비활성화되어 있습니다.</li>
+    </ul>
 
     <p>iOS 1.4.8부터 본 앱은 전반적인 앱 이용 현황을 파악하고 대만 iOS 프로모션을 통해 새 앱 실행이 발생했는지 측정하기 위해 Google Analytics for Firebase(GA4)를 사용합니다. 본 앱에는 광고가 표시되지 않습니다. Firebase Analytics는 앱 안에 광고를 게재하는 SDK가 아니라 성과 측정 도구입니다.</p>
     <p>Firebase Analytics는 설치마다 무작위 App Instance ID를 자동으로 생성하며, 첫 실행(<code>first_open</code>), 앱 업데이트, 세션 시작, 이용 시간, 운영체제 업데이트, StoreKit 구매 또는 구독 이벤트(예: 상품 ID, 상품명, 가격, 통화 및 수량), 자동 화면 보고가 활성화된 경우 화면 전환을 자동으로 기록할 수 있습니다. 또한 마스킹된 IP 주소에서 대략적인 국가／지역을 추정하고 기기, 운영체제, 앱 버전, Bundle ID 및 개발 플랫폼과 같은 기본 기술 정보를 수집할 수 있습니다. Apple 위치 서비스를 사용하여 정확한 위치를 수집하지 않습니다.</p>
@@ -227,7 +254,17 @@
 
   <section id="privacy-th" lang="th">
     <h1>Firebase Analytics และการวัดผลแคมเปญโฆษณา</h1>
-    <p class="updated">อัปเดตล่าสุด: 2026-08-21</p>
+    <p class="updated">อัปเดตล่าสุด: 2026-09-08</p>
+
+    <h2>ข้อมูลที่เราเก็บรวบรวม</h2>
+    <ul>
+      <li><strong>การตั้งค่าอุปกรณ์และการแสดงผล:</strong> เพื่อวิเคราะห์ความเข้ากันได้และปรับปรุงผลิตภัณฑ์ เราอาจบันทึกขนาดหน้าจอและหน้าต่าง รวมถึงพื้นที่ปลอดภัย (safe area) แบบลดความละเอียด ช่วงขนาดตัวอักษรของระบบและความหนาแน่นพิกเซล ยี่ห้อและประเภทอุปกรณ์ ระดับประสิทธิภาพ (ช่วงปีของอุปกรณ์และช่วงหน่วยความจำ) เวอร์ชันหลักของระบบปฏิบัติการ การตั้งค่าภาษา／ภูมิภาค／เขตเวลา และระบุว่าเป็นอุปกรณ์จริงหรือไม่ ข้อมูลนี้เชื่อมโยงกับรหัสบัญชีแบบใช้นามแฝง เราไม่เก็บรหัสโฆษณา หมายเลขประจำเครื่อง ที่อยู่เครือข่าย ชื่ออุปกรณ์ที่ผู้ใช้ตั้งเอง รุ่นที่แน่นอน พื้นที่จัดเก็บข้อมูล หรือสวิตช์การช่วยการเข้าถึง</li>
+    </ul>
+
+    <h2>การจัดเก็บข้อมูลและผู้ให้บริการ</h2>
+    <ul>
+      <li><strong>PostHog (US Cloud):</strong> รับรหัสบัญชีแบบใช้นามแฝง เหตุการณ์การโต้ตอบในแอปตามรายการที่อนุญาต ข้อมูลเวอร์ชันแอป／แพลตฟอร์มที่จำเป็น ค่าประมาณระดับประเทศที่ RevenueCat พบล่าสุด รวมทั้งการตั้งค่าอุปกรณ์และการแสดงผลแบบลดความละเอียด เพื่อวิเคราะห์กระบวนการ การรักษาผู้ใช้ และสถานะการวัดผล โดยไม่รับอีเมล หมายเลขโทรศัพท์ หลักฐานการซื้อ ข้อความที่ผู้ใช้กรอกเอง รหัสโฆษณา หรือตำแหน่งที่แม่นยำ และได้ปิดใช้การจัดเก็บที่อยู่ IP แล้ว</li>
+    </ul>
 
     <p>ตั้งแต่ iOS 1.4.8 เป็นต้นไป แอปจะใช้ Google Analytics for Firebase (GA4) เพื่อทำความเข้าใจการใช้งานแอปในภาพรวมและวัดว่าแคมเปญ iOS ในไต้หวันทำให้เกิดการเปิดแอปใหม่หรือไม่ แอปนี้ไม่แสดงโฆษณาภายในแอป และ Firebase Analytics เป็นเครื่องมือวัดผล ไม่ใช่ SDK สำหรับแสดงโฆษณาในแอป</p>
     <p>Firebase Analytics จะสร้าง App Instance ID แบบสุ่มให้กับการติดตั้งแต่ละครั้งโดยอัตโนมัติ และอาจบันทึกการเปิดแอปครั้งแรก (<code>first_open</code>), การอัปเดตแอป, การเริ่มเซสชัน, ระยะเวลาการใช้งาน, การอัปเดตระบบปฏิบัติการ, เหตุการณ์การซื้อหรือการสมัครสมาชิกผ่าน StoreKit (เช่น รหัสสินค้า ชื่อสินค้า ราคา สกุลเงิน และจำนวน) รวมถึงการเปลี่ยนหน้าจอเมื่อเปิดใช้การรายงานหน้าจออัตโนมัติ นอกจากนี้ อาจประมาณประเทศ／ภูมิภาคโดยคร่าวจากที่อยู่ IP ที่ถูกปกปิด และเก็บข้อมูลทางเทคนิคพื้นฐาน เช่น อุปกรณ์ ระบบปฏิบัติการ เวอร์ชันแอป Bundle ID และแพลตฟอร์มที่ใช้พัฒนา โดยไม่ใช้บริการระบุตำแหน่งของ Apple เพื่อรับตำแหน่งที่แม่นยำ</p>
@@ -240,7 +277,17 @@
 
   <section id="privacy-vi" lang="vi">
     <h1>Firebase Analytics và đo lường hiệu quả chiến dịch</h1>
-    <p class="updated">Cập nhật lần cuối: 2026-08-21</p>
+    <p class="updated">Cập nhật lần cuối: 2026-09-08</p>
+
+    <h2>Thông tin chúng tôi thu thập</h2>
+    <ul>
+      <li><strong>Thiết lập thiết bị và hiển thị:</strong> Để phân tích khả năng tương thích và cải thiện sản phẩm, chúng tôi có thể ghi nhận kích thước màn hình, cửa sổ và vùng an toàn ở dạng đã được làm thô; các nhóm cỡ chữ hệ thống và mật độ điểm ảnh; thương hiệu và loại thiết bị; nhóm hiệu năng (nhóm năm của thiết bị và nhóm bộ nhớ); phiên bản chính của hệ điều hành; thiết lập ngôn ngữ／khu vực／múi giờ; và thiết bị có phải là thiết bị thật hay không. Dữ liệu này được liên kết với mã nhận dạng tài khoản đã được giả danh. Chúng tôi không thu thập mã nhận dạng quảng cáo, số sê-ri thiết bị, địa chỉ mạng, tên thiết bị do người dùng đặt, tên mô hình chính xác, dung lượng lưu trữ hoặc các nút bật/tắt trợ năng.</li>
+    </ul>
+
+    <h2>Lưu trữ dữ liệu và nhà cung cấp dịch vụ</h2>
+    <ul>
+      <li><strong>PostHog (US Cloud):</strong> nhận mã nhận dạng tài khoản đã được giả danh, các sự kiện tương tác trong Ứng dụng thuộc danh sách cho phép, thông tin cần thiết về phiên bản Ứng dụng／nền tảng, thông tin ước tính quốc gia ở lần xuất hiện gần nhất do RevenueCat cung cấp, cùng các thiết lập thiết bị và hiển thị đã được làm thô, để phân tích phễu, khả năng duy trì người dùng và tình trạng đo lường. Dịch vụ không nhận địa chỉ email, số điện thoại, chứng từ mua hàng, nội dung nhập tự do, mã nhận dạng quảng cáo hoặc vị trí chính xác; chức năng lưu địa chỉ IP đã bị tắt.</li>
+    </ul>
 
     <p>Kể từ iOS 1.4.8, Ứng dụng sử dụng Google Analytics for Firebase (GA4) để hiểu tình hình sử dụng tổng thể và đo lường liệu chiến dịch iOS tại Đài Loan có tạo ra lượt mở ứng dụng mới hay không. Ứng dụng không hiển thị quảng cáo. Firebase Analytics là công cụ đo lường, không phải SDK dùng để phân phối quảng cáo bên trong Ứng dụng.</p>
     <p>Firebase Analytics tự động tạo một App Instance ID ngẫu nhiên cho mỗi lần cài đặt và có thể tự động ghi nhận lần mở đầu tiên (<code>first_open</code>), cập nhật ứng dụng, bắt đầu phiên, thời gian tương tác, cập nhật hệ điều hành, sự kiện mua hàng hoặc đăng ký qua StoreKit (ví dụ: mã sản phẩm, tên sản phẩm, giá, đơn vị tiền tệ và số lượng), cũng như chuyển màn hình khi tính năng báo cáo màn hình tự động được bật. Dịch vụ cũng có thể suy ra quốc gia／khu vực gần đúng từ địa chỉ IP đã được che và thu thập thông tin kỹ thuật cơ bản như thiết bị, hệ điều hành, phiên bản Ứng dụng, Bundle ID và nền tảng phát triển. Dịch vụ không dùng Apple Location Services để lấy vị trí chính xác.</p>
@@ -253,7 +300,17 @@
 
   <section id="privacy-id" lang="id">
     <h1>Firebase Analytics dan pengukuran kampanye</h1>
-    <p class="updated">Terakhir diperbarui: 2026-08-21</p>
+    <p class="updated">Terakhir diperbarui: 2026-09-08</p>
+
+    <h2>Informasi yang Kami Kumpulkan</h2>
+    <ul>
+      <li><strong>Pengaturan perangkat dan tampilan:</strong> Untuk menganalisis kompatibilitas dan meningkatkan produk, kami dapat mencatat dimensi layar, jendela, dan area aman yang diperkasar; kelompok ukuran font sistem dan kepadatan piksel; merek dan jenis perangkat; tingkat performa (kelompok tahun perangkat dan kelompok memori); versi utama sistem operasi; pengaturan bahasa／wilayah／zona waktu; serta apakah perangkat tersebut merupakan perangkat fisik. Data ini dikaitkan dengan pengenal akun berpseudonim. Kami tidak mengumpulkan pengenal iklan, nomor seri perangkat, alamat jaringan, nama perangkat yang diberikan pengguna, nama model yang tepat, kapasitas penyimpanan, atau tombol fitur aksesibilitas.</li>
+    </ul>
+
+    <h2>Penyimpanan Data dan Penyedia Layanan</h2>
+    <ul>
+      <li><strong>PostHog (US Cloud):</strong> menerima pengenal akun berpseudonim, peristiwa interaksi dalam Aplikasi yang masuk daftar izin, informasi versi Aplikasi／platform yang diperlukan, perkiraan negara yang terakhir terlihat dari RevenueCat, serta pengaturan perangkat dan tampilan yang diperkasar, untuk analisis funnel, retensi, dan kesehatan pengukuran. Layanan ini tidak menerima alamat email, nomor telepon, bukti pembelian, masukan bebas, pengenal iklan, atau lokasi presisi, dan penyimpanan alamat IP telah dinonaktifkan.</li>
+    </ul>
 
     <p>Mulai iOS 1.4.8, Aplikasi menggunakan Google Analytics for Firebase (GA4) untuk memahami penggunaan Aplikasi secara agregat dan mengukur apakah promosi iOS di Taiwan menghasilkan pembukaan Aplikasi baru. Aplikasi tidak menampilkan iklan. Firebase Analytics adalah layanan pengukuran, bukan SDK untuk menayangkan iklan di dalam Aplikasi.</p>
     <p>Firebase Analytics secara otomatis membuat App Instance ID acak untuk setiap instalasi dan dapat otomatis mencatat pembukaan pertama (<code>first_open</code>), pembaruan aplikasi, awal sesi, waktu interaksi, pembaruan sistem operasi, peristiwa pembelian atau langganan melalui StoreKit (seperti ID produk, nama produk, harga, mata uang, dan jumlah), serta perpindahan layar jika pelaporan layar otomatis diaktifkan. Layanan ini juga dapat memperkirakan negara／wilayah umum dari alamat IP yang disamarkan dan mengumpulkan informasi teknis dasar seperti perangkat, sistem operasi, versi Aplikasi, Bundle ID, dan platform pengembangan. Layanan ini tidak menggunakan Apple Location Services untuk memperoleh lokasi presisi.</p>
